@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.square.ShortWorkActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/short_work_save"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/save_black"
+            app:layout_constraintBottom_toBottomOf="@+id/include"
+            app:layout_constraintEnd_toEndOf="@+id/include"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+        <ImageView
+            android:id="@+id/short_work_share"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/share_black"
+            app:layout_constraintBottom_toBottomOf="@+id/include"
+            app:layout_constraintEnd_toStartOf="@+id/short_work_save"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+        <ImageView
+            android:id="@+id/short_work_author_img"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/include"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+
+        <TextView
+            android:id="@+id/short_work_author_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Alice"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/include"
+            app:layout_constraintStart_toEndOf="@+id/short_work_author_img"
+            app:layout_constraintTop_toTopOf="@+id/include" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/short_work_img"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <TextView
+            android:id="@+id/short_work_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/short_work_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

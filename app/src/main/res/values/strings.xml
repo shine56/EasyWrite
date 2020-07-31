@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EasyWriter</string>
+
+    <string name="album">相册</string>
+    <string name="camera">相机</string>
+
+    <!--    提示语句-->
+    <string name="cancel">取消</string>
+    <string name="confirm">确认</string>
+    <string name="delete">删除</string>
+    <string name="wait">稍等片刻~</string>
+    <string name="word">&#160;字</string>
+</resources>
