@@ -23,8 +23,8 @@ open class BaseActivity : AppCompatActivity() {
     override fun onCreate(@Nullable savedInstanceState: Bundle?) {
         Log.d(TAG, "$activityName-->onCreate()")
         super.onCreate(savedInstanceState)
-        val handler = MyCrashHandler(this)
-        Thread.setDefaultUncaughtExceptionHandler(handler)
+//        val handler = MyCrashHandler(this)
+//        Thread.setDefaultUncaughtExceptionHandler(handler)
     }
 
     override fun onPause() {

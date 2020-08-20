@@ -208,14 +208,14 @@ class LongEssayCreateActivity : BaseActivity() {
     }
 
 
-//    /**
-//     * 中文分词
-//     */
-//    open external fun initLac(model_path: String?): Unit
-//
-//    external fun releaseLac()
-//
-//    external fun stringFromJNI(): String?
-//
-//    external fun stringCutFromJNI(source_text: String?): String?
+    /**
+     * 中文分词
+     */
+    open external fun initLac(model_path: String?): Unit
+
+    external fun releaseLac()
+
+    external fun stringFromJNI(): String?
+
+    external fun stringCutFromJNI(source_text: String?): String?
 }

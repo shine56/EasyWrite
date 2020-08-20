@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.shine56.easywrite.base.BaseViewModel
 import com.shine56.easywrite.model.bean.LongPhoto
+import com.shine56.easywrite.util.toast
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

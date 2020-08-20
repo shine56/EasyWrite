@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.me.LoginActivity">
+
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="120dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/icon" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="登录EasyWriter"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/app_logo"
+            app:layout_constraintStart_toStartOf="@+id/app_logo"
+            app:layout_constraintTop_toBottomOf="@+id/app_logo" />
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="1dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/login_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:hint="账号"
+                android:textSize="14dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="1dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/login_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_account">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@null"
+                android:hint="密码"
+                android:textSize="14dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_password">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/mainBg2"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="忘记密码"
+            android:textColor="@color/mainBg2"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/login"
+            app:layout_constraintStart_toStartOf="@+id/login"
+            app:layout_constraintTop_toBottomOf="@+id/login" />
+
+        <TextView
+            android:id="@+id/go_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="前往注册"
+            android:textColor="@color/mainBg2"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/login"
+            app:layout_constraintStart_toStartOf="@+id/login"
+            app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

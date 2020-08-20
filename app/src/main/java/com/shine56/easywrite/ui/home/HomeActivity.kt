@@ -4,6 +4,7 @@ package com.shine56.easywrite.ui.home
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,12 +20,14 @@ import com.shine56.easywrite.base.MyApplication.Companion.VERTIVAL
 import com.shine56.easywrite.databinding.ActivityHomeBinding
 import com.shine56.easywrite.model.bean.ShortEssayWork
 import com.shine56.easywrite.ui.longessay.LongEssayCreateActivity
+import com.shine56.easywrite.ui.me.*
 import com.shine56.easywrite.ui.shortessay.ShortEssayCreateActivity
 import com.shine56.easywrite.ui.square.SquareActivity
 import com.shine56.easywrite.ui.view.MyViewPageTransformer
 import com.shine56.easywrite.util.viewHelper.MyTransform
 import com.shine56.easywrite.util.viewHelper.SpacesItemDecoration
 import com.shine56.easywrite.viewModel.HomeVm
+import kotlinx.android.synthetic.main.layout_me_header.*
 
 class HomeActivity : BaseActivity() {
 
@@ -37,22 +40,43 @@ class HomeActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_home)
         vm = ViewModelProvider(this).get(HomeVm::class.java)
         initView()
+        onObserve()
+        vm.refreshData()
     }
     private fun initView(){
         resetStatusBar(TRANSPARENT_BLACK)
         initViewPage()
         initRecy()
 
-        onObserve()
-        vm.refreshData()
+
+        val userHeadImg = binding.navView.getHeaderView(0).findViewById<ImageView>(R.id.user_head_img)
+        Glide.with(this)
+            .load(R.drawable.head_example)
+            .apply(RequestOptions.bitmapTransform(RoundedCorners(500)))
+            .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+            .error(R.color.hint_white)
+            .into(userHeadImg)
+
+        binding.homeToolbarLeft.setOnClickListener {
+            binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+        binding.navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.work -> startActivity(MyWorkActivity::class.java)
+                R.id.log_out -> startActivity(LoginActivity::class.java)
+                R.id.feed_back -> startActivity(FeedBackActivity::class.java)
+                R.id.setting -> startActivity(SettingActivity::class.java)
+                R.id.about -> startActivity(AboutActivity::class.java)
+            }
+
+            true
+        }
     }
     private fun onObserve(){
         vm.workList.observe(this, Observer {
             adapter.replaceAll(it)
         })
     }
-
-
     private fun initViewPage(){
         val viewPage = binding.homeVp
         val adapter = HomePageAdapter()

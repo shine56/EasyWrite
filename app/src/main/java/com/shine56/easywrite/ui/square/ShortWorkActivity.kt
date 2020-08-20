@@ -25,7 +25,7 @@ class ShortWorkActivity : BaseActivity() {
         initView()
     }
 
-    fun initView(){
+    private fun initView(){
 
         resetStatusBar(TRANSPARENT_BLACK)
 

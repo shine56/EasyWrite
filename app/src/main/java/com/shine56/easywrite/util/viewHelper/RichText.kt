@@ -6,13 +6,15 @@ import android.text.Spanned
 import android.text.style.BackgroundColorSpan
 import android.widget.EditText
 
-
 class RichText(private val editText: EditText) {
 
     /**
      * 文字背景颜色
      */
     fun setTextBg(){
+
+        //默认实现
+        //"抱歉，智能小AI出现一点小问题了。".toast()
         val editable = editText.editableText
         editable.clear()
         editable.append(setBackgroundColorSpan("辛亥革命"))

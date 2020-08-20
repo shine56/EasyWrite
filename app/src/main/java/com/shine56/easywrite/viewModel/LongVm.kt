@@ -3,6 +3,7 @@ package com.shine56.easywrite.viewModel
 import androidx.lifecycle.MutableLiveData
 import com.shine56.easywrite.base.BaseViewModel
 import com.shine56.easywrite.model.bean.LongPhoto
+import com.shine56.easywrite.util.toast
 
 class LongVm: BaseViewModel() {
 

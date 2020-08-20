@@ -33,16 +33,16 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        //cpp
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-                arguments "-DANDROID_STL=c++_shared"
-            }
-        }
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
-        }
+//        //cpp
+//        externalNativeBuild {
+//            cmake {
+//                cppFlags ""
+//                arguments "-DANDROID_STL=c++_shared"
+//            }
+//        }
+//        ndk {
+//            abiFilters "armeabi-v7a", "arm64-v8a"
+//        }
     }
 
     buildTypes {
@@ -53,16 +53,16 @@ android {
     }
 
     //cpp
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
-        }
-    }
-
-    packagingOptions {
-        exclude 'lib/arm64-v8a/libpaddle_lite_jni.so'
-    }
+//    externalNativeBuild {
+//        cmake {
+//            path "src/main/cpp/CMakeLists.txt"
+//            version "3.10.2"
+//        }
+//    }
+//
+//    packagingOptions {
+//        exclude 'lib/arm64-v8a/libpaddle_lite_jni.so'
+//    }
 }
 
 repositories {

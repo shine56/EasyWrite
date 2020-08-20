@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/work"
+            android:icon="@mipmap/work"
+            android:title="作品"/>
+
+        <item
+            android:id="@+id/message"
+            android:icon="@mipmap/message"
+            android:title="消息"/>
+
+        <item
+            android:id="@+id/collection"
+            android:icon="@mipmap/collection"
+            android:title="收藏"/>
+        <item
+            android:id="@+id/night"
+            android:icon="@mipmap/night"
+            android:title="夜间模式"/>
+        <item
+            android:id="@+id/setting"
+            android:icon="@mipmap/setting"
+            android:title="设置"/>
+        <item
+            android:id="@+id/feed_back"
+            android:icon="@mipmap/feed_back"
+            android:title="反馈"/>
+        <item
+            android:id="@+id/about"
+            android:icon="@mipmap/about"
+            android:title="关于"/>
+        <item
+            android:id="@+id/log_out"
+            android:icon="@mipmap/logout"
+            android:title="退出登录"/>
+
+    </group>
+
+</menu>

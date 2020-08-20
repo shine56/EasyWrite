@@ -13,26 +13,26 @@ class MyApplication : Application() {
         const val IS_FINISH = 1
         const val NOT_FINISH = 0
 
-        const val FILM = "Film"
-        const val MUSIC = "Music"
-        const val WALLPAPER = "Wallpaper"
+//        const val FILM = "Film"
+//        const val MUSIC = "Music"
+//        const val WALLPAPER = "Wallpaper"
 
         const val AUTO = 0
         const val ZH_CN = 1
         const val ZH_HK = 2
         const val EN = 3
 
-        const val HAPPY = 1
-        const val CALM = 2
-        const val COMPLEX = 3
-        const val SAD = 4
-        const val AI = 5
-
-        const val SAD_START = -50
-        const val COMPLEX_START = -30
-        const val CALM_START = -10
-        const val HAPPY_START = 20
-        const val HAPPY_END = 51
+//        const val HAPPY = 1
+//        const val CALM = 2
+//        const val COMPLEX = 3
+//        const val SAD = 4
+//        const val AI = 5
+//
+//        const val SAD_START = -50
+//        const val COMPLEX_START = -30
+//        const val CALM_START = -10
+//        const val HAPPY_START = 20
+//        const val HAPPY_END = 51
 
         const val TASK_1 = 1
         const val TASK_2 = 2

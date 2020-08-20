@@ -61,11 +61,12 @@ class ShortEssayCreateActivity : BaseActivity() {
                     .load(R.drawable.work3)
                     .transform(MyTransform(this, binding.ivShotImg.width.toFloat(), 0f, false))
                     .into(binding.ivShotImg)
+               // "抱歉，服务器出现一点小问题了。".toast()
             }else{
-                binding.etShortText.setText("这个世界上根本没有正确的选择\n" +
-                        "我们只不过是要努力奋斗\n" +
-                        "使当初的选择变得正确\n" +
-                        "—— 村上春树 \u200B\u200B\u200B\u200B")
+                //"抱歉，服务器出现一点小问题了。".toast()
+                binding.etShortText.setText("人不是因为没有信念而失败，而是因为不能把信念化成行动，并且坚持到底。\n" +
+                        "\n" +
+                        "--卡耐基")
             }
             matchDialog.hide()
         })
