@@ -18,6 +18,6 @@ class WebActivity : BaseActivity() {
         val webView  = findViewById<WebView>(R.id.webView)
         webView.settings.javaScriptEnabled  = true
         webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://wapbaike.baidu.com/item/%E4%B8%89%E6%B0%91%E4%B8%BB%E4%B9%89?timestamp=1595999078459")
+        webView.loadUrl("https://baike.baidu.com/")
     }
 }

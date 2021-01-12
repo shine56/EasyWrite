@@ -57,16 +57,16 @@ class ShortEssayCreateActivity : BaseActivity() {
 
         vm.matchControl.observe(this, Observer {
             if (it == 1){
-                Glide.with(this)
-                    .load(R.drawable.work3)
-                    .transform(MyTransform(this, binding.ivShotImg.width.toFloat(), 0f, false))
-                    .into(binding.ivShotImg)
-               // "抱歉，服务器出现一点小问题了。".toast()
+//                Glide.with(this)
+//                    .load(R.drawable.work3)
+//                    .transform(MyTransform(this, binding.ivShotImg.width.toFloat(), 0f, false))
+//                    .into(binding.ivShotImg)
+                "抱歉，服务器出现一点小问题了。".toast()
             }else{
-                //"抱歉，服务器出现一点小问题了。".toast()
-                binding.etShortText.setText("人不是因为没有信念而失败，而是因为不能把信念化成行动，并且坚持到底。\n" +
-                        "\n" +
-                        "--卡耐基")
+                "抱歉，出现了一点小问题，未匹配到相关文案。".toast()
+//                binding.etShortText.setText("人不是因为没有信念而失败，而是因为不能把信念化成行动，并且坚持到底。\n" +
+//                        "\n" +
+//                        "--卡耐基")
             }
             matchDialog.hide()
         })

@@ -51,7 +51,7 @@ class HomeActivity : BaseActivity() {
 
         val userHeadImg = binding.navView.getHeaderView(0).findViewById<ImageView>(R.id.user_head_img)
         Glide.with(this)
-            .load(R.drawable.head_example)
+            .load(R.color.mainBg2)
             .apply(RequestOptions.bitmapTransform(RoundedCorners(500)))
             .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
             .error(R.color.hint_white)
